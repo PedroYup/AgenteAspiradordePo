@@ -30,13 +30,13 @@ while 1
     
     
     %escolhe a ação de acordo com a percepção - chama função agenteReativoSimples
-    acao = agenteReativoSimples(percepcao)
+    acao = agenteReativoSimples(percepcao);
     
     %chama a função atualizaAmbiente para atualizar a ação realizada
-    [modSala, modX, modY] = atualizaAmbiente(sala, acao, percepcao.x, percepcao.y);
+    [sala, modX, modY] = atualizaAmbiente(sala, acao, percepcao.x, percepcao.y);
     
     %Mostra na tela as ações escolhidas e percepções (veja as funções 'disp' e 'num2str')
-    disp{(['Estado da percepcao -> ' num2str(percepcao.estado) '| Acao escolhida: ' acoesAg(acao)])}
+    %disp{(['Estado da percepcao -> ' num2str(percepcao.estado) '| Acao escolhida: ' acoesAg(acao)])}
     
     %mostra o ambiente atualizado
     mostraAmbiente(sala);
@@ -45,13 +45,13 @@ while 1
     hold on;
     posicaoAspirador(modX, modY);
     hold off;
-    pause(0.15)
+    pause(0.15);
     
     %atualiza a percepção e o estado depois de concluir a ação
-    percepcao.x = modX
-    percepcao.y = modY
+    percepcao.x = modX;
+    percepcao.y = modY;
     
-    percepcao.estado
+    percepcao.estado = sala(modX, modY)==2;
     
     
 end
