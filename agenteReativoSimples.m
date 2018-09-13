@@ -16,7 +16,7 @@ funcaoMapear = [2 2 4;
                 3 4 3;
                 3 3 3;
                 3 2 2;
-                4 2 4;
+                4 2 3;
                 4 3 3;
                 4 4 3;
                 4 5 2;
@@ -30,9 +30,9 @@ if percepcao.estado == 1
   acao = 5;
   
 else
-  for i = i:size(funcaoMapear, 1)
-     if percepcao.x == funcaoMapear(i, 1) && percepcao.y == funcaoMapear(i, 2)
-       acao = funcaoMapear(i, 3)
-                
-                
+  for i = 1:size(funcaoMapear, 1)
+    if percepcao.x == funcaoMapear(i, 1) && percepcao.y == funcaoMapear(i, 2)
+      acao = funcaoMapear(i, 3);
+    end
+  end 
 end

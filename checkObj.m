@@ -2,6 +2,6 @@
 %retorna 1 se tem sujeira, caso contrário retorna 0
 function objObtido=checkObj(sala)
 
-
+%checar se a sala está suja ou não
 
 end
