@@ -4,7 +4,6 @@
 % A variável "percepcao" dentro dos parênteses é a entrada da função.
 function acao = agenteReativoSimples(percepcao)
 
-
 % Para cada posição definir as ações disponíveis (funcaoMapear)
 % ações = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'}
 %            1         2          3           4          5
@@ -24,7 +23,12 @@ funcaoMapear = [2 2 4,
 mapeamento = 0; %para verificar erro
 
 if percepcao.estado == 1
-  acao = 5
+  acao = 5;
+  
+else
+  for i = i:size(funcaoMapear, 1)
+     if percepcao.x == funcaoMapear(1, 1) && percepcao.y == funcaoMapear(1, 2)
+       acao = funcaoMapear(1, 1)
                 
                 
 end

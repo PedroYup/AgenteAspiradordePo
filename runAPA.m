@@ -17,7 +17,7 @@ hold off;
 pause(1);
 
 %se a célula estiver suja então retornará 1, caso contrário, 0
-salaSuja = sala(2, 2)==2;
+salaSuja = sala(posicaoX, posicaoY)==2;
 
 %gera uma variável de estrutura para saber a posição e o estado de cada
 %célula = struct('nome', valor) - veja a função struct
@@ -33,10 +33,10 @@ acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'};
     acao = agenteReativoSimples(percepcao)
     
     %chama a função atualizaAmbiente para atualizar a ação realizada
-    [modSala, modX, modY] = atualizaAmbiente(sala, acao, percepcao.x, percepcao.y)
+    [modSala, modX, modY] * atualizaAmbiente(sala, acao, percepcao.x, percepcao.y);
     
     %Mostra na tela as ações escolhidas e percepções (veja as funções 'disp' e 'num2str')
-    
+    disp{(['Estado da percepcao -> ' num2str(percepcao.estado) '| Acao escolhida: ' acoesAg(acao)])}
     
     %mostra o ambiente atualizado
     mostraAmbiente(sala);
@@ -45,8 +45,14 @@ acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'};
     hold on;
     posicaoAspirador(modX, modY);
     hold off;
+    pause(0.15)
     
     %atualiza a percepção e o estado depois de concluir a ação
+    percepcao.x = modXy
+    y
+    
+    percepcao.estado
+    
     
 %end
 
