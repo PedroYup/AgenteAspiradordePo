@@ -31,8 +31,8 @@ if percepcao.estado == 1
   
 else
   for i = i:size(funcaoMapear, 1)
-     if percepcao.x == funcaoMapear(1, 1) && percepcao.y == funcaoMapear(1, 2)
-       acao = funcaoMapear(1, 1)
+     if percepcao.x == funcaoMapear(i, 1) && percepcao.y == funcaoMapear(i, 2)
+       acao = funcaoMapear(i, 3)
                 
                 
 end
