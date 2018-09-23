@@ -26,6 +26,8 @@ percepcao = struct('x', posicaoX, 'y', posicaoY, 'estado', salaSuja);
 %---ações do agente---
 acoesAg = {'acima', 'abaixo', 'esquerda', 'direita', 'aspirar'};
 
+contador = 0;
+
 while 1
     
     
@@ -53,6 +55,7 @@ while 1
     
     percepcao.estado = sala(modX, modY)==2;
     
-    
 end
+
+disp(contador);
 
